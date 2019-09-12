@@ -29,7 +29,6 @@ call deactivate
     ipywidgets ^
     joblib ^
     jupyter_client ^
-    mock ^
     msgpack-python ^
     prometheus_client ^
     psutil ^
