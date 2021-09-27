@@ -109,7 +109,7 @@ logging_levels = {
     if isinstance(logger, logging.Logger)
 }
 
-_TEST_TIMEOUT = 30
+_TEST_TIMEOUT = 30 * 10  # For slower architectures.
 _offload_executor.submit(lambda: None).result()  # create thread during import
 
 
