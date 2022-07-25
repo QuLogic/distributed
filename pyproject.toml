@@ -55,7 +55,6 @@ ssh = "distributed.cli.dask_ssh:main"
 spec = "distributed.cli.dask_spec:main"
 
 [tool.setuptools.packages.find]
-exclude = ["*tests*"]
 namespaces = false
 
 [tool.setuptools.package-data]
@@ -88,6 +87,7 @@ ignore = [
     "RUF043", # Pattern passed to `match=` contains metacharacters but is neither escaped nor raw
     "RUF059", # Unpacked variable is never used
 ]
+"distributed.tests" = ["*.pem"]
 
 [tool.ruff.lint.extend-per-file-ignores]
 "**__init__.py" = ["F401", "F811"]
