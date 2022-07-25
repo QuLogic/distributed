@@ -64,7 +64,6 @@ include-package-data = true
 zip-safe = false
 
 [tool.setuptools.packages.find]
-exclude = ["*tests*"]
 namespaces = false
 
 [tool.setuptools.package-data]
@@ -76,6 +75,7 @@ distributed = [
     "http/templates/*.html",
     "py.typed",
 ]
+"distributed.tests" = ["*.pem"]
 
 [tool.isort]
 sections = ["FUTURE", "STDLIB", "THIRDPARTY", "DISTRIBUTED", "FIRSTPARTY", "LOCALFOLDER"]

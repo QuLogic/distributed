@@ -9,7 +9,9 @@ recursive-include distributed *.svg
 recursive-include distributed *.ico
 recursive-include distributed *.yaml
 recursive-include docs *.rst
-recursive-exclude distributed **/tests/*
+recursive-include distributed/tests *.egg
+recursive-include distributed/tests *.pem
+recursive-include distributed/tests *.pyz
 
 include setup.py
 include README.rst
