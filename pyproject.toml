@@ -109,7 +109,6 @@ addopts = '''
 -p no:asyncio
 -p no:legacypath'''
 filterwarnings = [
-    "error",
     # xref: https://github.com/jupyter/jupyter_core/pull/292
     # xref: https://github.com/jupyter/jupyter_core/issues/309
     '''ignore:Jupyter is migrating its paths to use standard platformdirs''',
