@@ -600,7 +600,7 @@ def test_single_executable_deprecated(loop):
     port = open_port()
     with popen(
         [
-            "dask-scheduler",
+            shutil.which("dask-scheduler"),
             "--no-dashboard",
             f"--port={port}",
         ],
