@@ -646,13 +646,13 @@ class _CondaInstaller:
         )
         try:
             from conda.cli.python_api import Commands, run_command
-        except ModuleNotFoundError as e:  # pragma: nocover
+        except ModuleNotFoundError:  # pragma: nocover
             msg = (
                 "conda install failed because conda could not be found. "
                 "Please make sure that conda is installed."
             )
             logger.error(msg)
-            raise RuntimeError(msg) from e
+            raise RuntimeError(msg) from None
         try:
             _, stderr, returncode = run_command(
                 Commands.INSTALL, self.conda_options + self.packages
